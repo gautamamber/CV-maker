@@ -1,0 +1,274 @@
+ <html>
+    <head>
+        <title>Handle POST requests with Flask</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <style type="text/css" media="screen">
+  * {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  body, html {
+    padding: 3px 3px 3px 3px;
+
+    background-color: #D8DBE2;
+
+    font-family: Verdana, sans-serif;
+    font-size: 11pt;
+    text-align: center;
+  }
+
+  div.main_page {
+    position: relative;
+    display: table;
+
+    width: 600px;
+
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 0px 0px 0px;
+
+    border-width: 2px;
+    border-color: #212738;
+    border-style: solid;
+
+    background-color: #FFFFFF;
+
+    text-align: center;
+  }
+
+  div.page_header {
+    height: 99px;
+    width: 100%;
+
+    background-color: #F5F6F7;
+  }
+
+  div.page_header span {
+    margin: 15px 0px 0px 50px;
+
+    font-size: 180%;
+    font-weight: bold;
+  }
+
+  div.page_header img {
+    margin: 3px 0px 0px 40px;
+
+    border: 0px 0px 0px;
+  }
+
+  div.table_of_contents {
+    clear: left;
+
+    min-width: 200px;
+
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.table_of_contents_item {
+    clear: left;
+
+    width: 100%;
+
+    margin: 4px 0px 0px 0px;
+
+    background-color: #FFFFFF;
+
+    color: #000000;
+    text-align: left;
+  }
+
+  div.table_of_contents_item a {
+    margin: 6px 0px 0px 6px;
+  }
+
+  div.content_section {
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.content_section_text {
+    padding: 4px 8px 4px 8px;
+
+    color: #000000;
+    font-size: 100%;
+  }
+
+  div.content_section_text pre {
+    margin: 8px 0px 8px 0px;
+    padding: 8px 8px 8px 8px;
+
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #000000;
+
+    background-color: #F5F6F7;
+
+    font-style: italic;
+  }
+
+  div.content_section_text p {
+    margin-bottom: 6px;
+  }
+
+  div.content_section_text ul, div.content_section_text li {
+    padding: 4px 8px 4px 16px;
+  }
+
+  div.section_header {
+    padding: 3px 6px 3px 6px;
+
+    background-color: #D9D9D9;
+
+    color: #000000;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+  }
+
+  
+
+  div.section_header_grey {
+    background-color: #D9D9D9;
+    color: #000000;
+  }
+
+  .floating_element {
+    position: relative;
+    float: left;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+th {
+    text-align: left;
+}
+.data{
+  text-align: left;}
+ 
+    </style>
+  </head>
+  <body>
+
+    <div class="main_page">
+      <div class="content_section_text data">
+        
+        Name:&nbsp;&nbsp;&nbsp;{{name}} <br>
+        E-mail:&nbsp;&nbsp;&nbsp;{{email}} <br>
+        Contact:&nbsp;&nbsp;&nbsp;{{contact}} <br>
+      </div>
+      <div class="content_section floating_element">
+
+
+        <div class="section_header section_header_grey">
+         OBJECTIVE
+        </div>
+        <div class="content_section_text">
+          <p>
+               To seek an entry level position in a growth oriented organization while further enhancing my skills and capabilities.
+          </p>
+
+
+          
+        </div>
+        <div class="section_header">
+          ACEDEMIA
+        </div>
+        <div class="content_section_text">
+          <table style="width:100%">
+  <tr>
+    <th>QUALIFICATION</th>
+    <th>BOARD<br>/UNIVERSITY</th> 
+    <th>SUBJECTS</th>
+    <th>PASSING YEAR</th>
+    <th>MARKS</th>
+  </tr>
+  <tr>
+    <td>Graduation</td>
+    <td>{{gb}}</td>
+    <td>{{gs}}</td>
+    <td>{{gp}}</td>
+    <td>{{gm}}</td>
+  </tr>
+  <tr>
+    <td>XII</td>
+    <td>{{tvb}}</td>
+    <td>{{tvs}}</td>
+    <td>{{tvp}}</td>
+    <td>{{tvm}}</td>
+    
+  </tr>
+  <tr>
+    <td>X</td>
+    <td>{{tb}}</td>
+    <td>{{ts}}</td>
+    <td>{{tp}}</td>
+    <td>{{tm}}</td>
+  </tr>
+  
+ 
+</table>
+               
+        </div>
+
+
+         <div class="section_header">
+          PROJECTS UNDERTAKEN
+        </div>
+        <div class="content_section_text">
+          {{projetcs}}
+               
+        </div>
+
+         <div class="section_header">
+          SKILLS
+        </div>
+        <div class="content_section_text">
+          
+              {{skills}} 
+        </div>
+
+
+         <div class="section_header">
+          HONOUR AND ACHIEVEMENTS
+        </div>
+        <div class="content_section_text">
+          {{achievements}}
+               
+        </div>
+
+
+         <div class="section_header">
+          PERSONAL DOSSIER
+        </div>
+        <div class="content_section_text">
+          Father’s Name – &nbsp;&nbsp;&nbsp;{{fathername}}<br>
+          Permanent Address – {{residance}}<br> 
+          Residential Landline No - {{residance}}<br>
+          Date of Birth – {{dob}}<br>
+          Languages Known – {{lang}}<br>
+               
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+    
+  </body>
+</html>

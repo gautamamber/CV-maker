@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>amber</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<style>
+.fill{
+	font-size: 30px;
+	color: #EA783B;
+}
+
+	
+
+	input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+body  {
+    background-image: url("static/img/re.jpg");
+    
+
+}
+
+input[type=submit] {
+    width: 70%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+</style>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<center><b><i class="fill">Fill your details:</i></b></center>
+		</div>
+	</div>
+</div>
+<hr>
+	<div class="container">
+		<div class="row">
+			 <div class="col-xs-12">
+			 	<form method="post" action="{{ url_for('hello') }}">
+                  <label for="yourname">Full Name:</label>
+                  <input type="text" name="yourname" placeholder="ex: Amber Guatam" required /><br />
+		   <label for="youremail">E-mail:</label>
+                  <input type="text" name="youremail" placeholder="ex: exmaple@something.com" required /><br />
+                  <label for="youremail">Contact:</label>
+                  <input type="text" name="contact" placeholder="9876543210" required /><br />
+		<label for="youremail">Father's Name</label>
+                  <input type="text" name="fathername" placeholder="ex: Mr. Salman Khan" required /><br />
+			<label for="youremail">Complete address:</label>
+                  <input type="text" name="address" placeholder="ex: H.NO 3126 Rajeev Chowk, Gurgaon, Haryana(India)"  required /><br />
+		<label for="youremail">Residance contact:</label>
+                  <input type="text" name="residance" placeholder="ex: 01274-251590" required /><br />
+			<label for="youremail">Date of birth:</label>
+                  <input type="text" name="dob" placeholder="ex: D/M/Y" required /><br />
+			<label for="youremail">Languages known:</label>
+                  <input type="text" name="lang" placeholder="ex: English, Hindi, French" required /><br />
+			<label for="youremail">Graduation College name:</label>
+                  <input type="text" name="gb" placeholder="ex: Amity Unuversity, Haryana" required /><br />
+			<label for="youremail">Graduation subjects or stream:</label>
+                  <input type="text" name="gs" placeholder="ex: B.tech (CSE)" required /><br />
+			<label for="youremail">Graduation passing year:</label>
+                  <input type="text" name="gp" placeholder="ex: 2015-2019" required /><br />
+			<label for="youremail">Garduation marks in % or CGPA:</label>
+                  <input type="text" name="gm" placeholder="ex: 9.0" required /><br />
+
+			<label for="youremail">10th BOARD name:</label>
+                  <input type="text" name="tb" placeholder="ex: CBSE" required /><br />
+			<label for="youremail">10th subjects:</label>
+                  <input type="text" name="ts" placeholder="ex: Eng, Hindi etc." required /><br />
+			<label for="youremail">10th passing year</label>
+                  <input type="text" name="tp" placeholder="ex: 2013" required /><br />
+			<label for="youremail">10th marks in % or CGPA:</label>
+                  <input type="text" name="tm" placeholder="ex: 8.0" required /><br />
+			<label for="youremail">12th BOARD name:</label>
+                  <input type="text" name="tvb" placeholder="ex: CBSE" required /><br />
+			<label for="youremail">12th stream:</label>
+                  <input type="text" name="tvs" placeholder="ex: PCM" required /><br />
+			<label for="youremail">12th passing year</label>
+                  <input type="text" name="tvp" placeholder="ex: 2015"  required /><br />
+			<label for="youremail">12th marks in %:</label>
+                  <input type="text" name="tvm" placeholder="ex: 80%" required /><br />
+			<label for="youremail">Your projetcs in detail:</label>
+                  <input type="text" name="projects" placeholder="Your complete project details" required /><br />
+			<label for="youremail">Your Skills:</label>
+                  <input type="text" name="skills" placeholder="Your skills" required /><br />
+			<label for="youremail">Your achievements:</label>
+                  <input type="text" name="achievements" placeholder="Your achievements" required /><br />
+                  <center><input type="submit" /></center>
+                </form>
+			 </div>
+		</div>
+	</div>
+
+</body>
+</html>
